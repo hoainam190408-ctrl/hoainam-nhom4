@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trang Chủ - Trường THPT Krông Bông</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="vertical-menu">
+    <img src="logo.png" alt="Logo" class="logo" />
+    <ul>
+      <li><a href="index.html" class="active">🏠 Trang chủ</a></li>
+      <li><a href="hoatdong.html">  🎸🏀 Hoạt động</a></li>
+      <li><a href="thanhtich.html">🏅 Thành tích</a></li>
+      <li><a href="vannghe.html">  🎸 Văn nghệ</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Trường THPT Krông Bông</h1>
+    <p>Năng động • Sáng tạo • Tỏa sáng</p>
+  </header>
+
+  <div class="section">
+    <div class="text">
+      <h2>CLB Hoạt Động</h2>
+      <ul>
+        <li>Rèn luyện sức khỏe & tinh thần đồng đội</li>
+        <li>Phát triển kỹ năng tổ chức & giao tiếp</li>
+        <li>Tạo môi trường gắn kết học sinh</li>
+      </ul>
+      <a href="hoatdong.html">Chi tiết</a>
+    </div>
+    <img src="hoatdong2.jpg" alt="Hoạt động" />
+  </div>
+
+  <div class="section">
+    <img src="hoatdong6.jpg" alt="Thành tích" />
+    <div class="text">
+      <h2>CLB Thành Tích</h2>
+      <ul>
+        <li>Ghi nhận nỗ lực và cống hiến</li>
+        <li>Khích lệ tinh thần học tập và sáng tạo</li>
+      </ul>
+      <a href="thanhtich.html">Chi tiết</a>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="text">
+      <h2>CLB Văn Nghệ</h2>
+      <ul>
+        <li>Rèn luyện phong thái & tự tin</li>
+        <li>Phát triển tài năng biểu diễn</li>
+        <li>Tạo sân chơi giao lưu nghệ thuật</li>
+      </ul>
+      <a href="vannghe.html">Chi tiết</a>
+    </div>
+    <img src="mua2.jpg" alt="Văn nghệ" />
+  </div>
+
+  <footer>
+    <p>Trường Trung Học Phổ Thông Krông Bông</p>
+    <P> <b> Nhóm 4 / Lớp 12A2 </b> </P>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.body.classList.add("fade-in");
+      const links = document.querySelectorAll("a");
+      links.forEach(link => {
+        if (link.hostname === window.location.hostname) {
+          link.addEventListener("click", e => {
+            e.preventDefault();
+            const target = link.href;
+            document.body.classList.remove("fade-in");
+            setTimeout(() => { window.location.href = target; }, 400);
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

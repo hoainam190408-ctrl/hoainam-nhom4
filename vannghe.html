@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CLB Văn Nghệ</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="vertical-menu">
+    <img src="logo.png" alt="Logo" class="logo" />
+    <ul>
+      <li><a href="index.html">🏠 Trang chủ</a></li>
+      <li><a href="hoatdong.html">🏃 Hoạt động</a></li>
+      <li><a href="thanhtich.html">🏅 Thành tích</a></li>
+      <li><a href="vannghe.html" class="active">🎵 Văn nghệ</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Câu Lạc Bộ Văn Nghệ</h1>
+    <p>Sáng tạo – Tự tin – Lan tỏa niềm vui học đường</p>
+  </header>
+
+  <div class="section">
+    <div class="text">
+      <h2>Giới thiệu</h2>
+      <p>CLB Văn Nghệ là nơi học sinh thể hiện đam mê âm nhạc, rèn luyện kỹ năng biểu diễn và lan tỏa tinh thần gắn kết.</p>
+    </div>
+    <img src="mua1.jpeg" alt="Văn nghệ" />
+  </div>
+
+  <footer><p>Trường Trung Học Phổ Thông Krông Bông</p>
+      <P> <b> Nhóm 4 / Lớp 12A2 </b> </P>
+    </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.body.classList.add("fade-in");
+      const links = document.querySelectorAll("a");
+      links.forEach(link => {
+        if (link.hostname === window.location.hostname) {
+          link.addEventListener("click", e => {
+            e.preventDefault();
+            const target = link.href;
+            document.body.classList.remove("fade-in");
+            setTimeout(() => { window.location.href = target; }, 400);
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
